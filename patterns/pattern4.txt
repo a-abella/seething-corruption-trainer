@@ -1,0 +1,19 @@
+--------------------------
+|llllllllllll            |
+|llllllllllll            |
+|llllllllllll            |
+|llllllllllll            |
+|llllllllllll            |
+|ppppppplllll            |
+|ppppppppplll            |
+|ppppppppppll            |
+|pppppppppp              |
+|ppppppppp               |
+|ppppppp                 |
+|           ooo          |
+|          oooooo        |
+|         ooooooooooooooo|
+|        oooooooooooooooo|
+|       ooooooooooooooooo|
+|      oooooooooooooooooo|
+--------------------------
