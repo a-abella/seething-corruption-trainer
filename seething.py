@@ -25,33 +25,35 @@ highest_streak = 0
 on_switch = True
 
 while on_switch:
-	os.system('clear')
-	
-	while True:
-		new_rand = randint(1,4)
-		if new_rand != previous_num:
-			pattern_num = new_rand
-			break
+    os.system('clear')
 
-	previous_num = pattern_num
+    while True:
+        new_rand = randint(1, 4)
+        if new_rand != previous_num:
+            pattern_num = new_rand
+            break
 
-	print 'Correct raid call streak: ' + str(correct_count)
-	if correct_count > highest_streak:
-		highest_streak = correct_count
-	print 'Highest streak: ' + str(highest_streak) + '\n'
+    previous_num = pattern_num
 
-	pattern_file = 'patterns/pattern' + str(pattern_num) + '.txt'
+    print 'Correct raid call streak: ' + str(correct_count)
+    if correct_count > highest_streak:
+        highest_streak = correct_count
+    print 'Highest streak: ' + str(highest_streak) + '\n'
 
-	os.system('cat ' + pattern_file)
+    pattern_file = 'patterns/pattern' + str(pattern_num) + '.txt'
 
-	kb = raw_input("\n\nCall the spots, then press Enter: ")
+    os.system('cat ' + pattern_file)
 
-	if (pattern_num == 1 and kb == 'llr') or (pattern_num == 2 and kb == 'rlp') or (pattern_num == 3 and kb == 'lrl') or (pattern_num == 4 and kb == 'rlb'):
-		correct_count += 1
-		print '\nGood call!'
-		time.sleep(1)
-	else:
-		correct_count = 0
-		print '\nYou fucked up, Tore!'
-		time.sleep(2)
+    kb = raw_input("\n\nCall the spots, then press Enter: ")
 
+    if (pattern_num == 1 and kb == 'llr') or (pattern_num == 2 and kb == 'rlp') or (pattern_num == 3 and kb == 'lrl') or (pattern_num == 4 and kb == 'rlb'):
+        correct_count += 1
+        print '\nGood call!'
+        time.sleep(1)
+    elif kb == 'exit':
+        os.system('clear')
+        break
+    else:
+        correct_count = 0
+        print '\nYou fucked up, Tore!'
+        time.sleep(2)
